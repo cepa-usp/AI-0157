@@ -1,0 +1,3 @@
+h1. Relações filogenéticas
+
+Nesta Atividade Interativa (AI) o usuário deve arrastar as taxinomias e textos para as caixas disponibilizadas, de modo a representar corretamente as relações filogenéticas.
