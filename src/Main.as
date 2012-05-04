@@ -551,7 +551,7 @@
 				balao.visible = false;
 				
 				pointsTuto = 	[new Point(405, 460),
-								new Point(353 , 90),
+								new Point(348 , 180),
 								new Point(650 , 543),
 								new Point(finaliza.x, finaliza.y + finaliza.height / 2)];
 								
