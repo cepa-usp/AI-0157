@@ -158,7 +158,7 @@
 			var currentScore:Number = int((nCertas / nPecas) * 100);
 			
 			if (currentScore < 100) {
-				feedbackScreen.setText("Ops!... \nInicie uma nova tentativa para refazer o exercício.");
+				feedbackScreen.setText("Ops!... \nReveja sua resposta.\nInicie uma nova tentativa para refazer o exercício.");
 			}
 			else {
 				feedbackScreen.setText("Parabéns!\nSua resposta está correta!");
