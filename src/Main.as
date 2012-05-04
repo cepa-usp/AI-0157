@@ -161,7 +161,7 @@
 				feedbackScreen.setText("Ops!... \nInicie uma nova tentativa para refazer o exercício.");
 			}
 			else {
-				feedbackScreen.setText("Parabéns!\nA sequência está correta!");
+				feedbackScreen.setText("Parabéns!\nSua resposta está correta!");
 			}
 			
 			if (!completed) {
