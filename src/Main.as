@@ -278,7 +278,7 @@
 						Peca(child).currentFundo = getFundoByName(status.pecas[child.name]);
 						Fundo(Peca(child).currentFundo).currentPeca = Peca(child);
 						Peca(child).x = Peca(child).currentFundo.x;
-						Peca(child).y = Peca(child).currentFundo.y;
+						Peca(child).y = Peca(child).currentFundo.y + 20;
 						Peca(child).gotoAndStop(2);
 					}
 				}
