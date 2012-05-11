@@ -609,6 +609,9 @@
 			connected = scorm.connect();
 			
 			if (connected) {
+				
+				if (scorm.get("cmi.mode" != "normal")) return;
+				
 				scorm.set("cmi.exit", "suspend");
 				// Verifica se a AI já foi concluída.
 				var status:String = scorm.get("cmi.completion_status");	
@@ -671,6 +674,8 @@
 		{
 			if (connected)
 			{
+				if (scorm.get("cmi.mode" != "normal")) return;
+				
 				// Salva no LMS a nota do aluno.
 				var success:Boolean = scorm.set("cmi.score.raw", score.toString());
 
@@ -712,11 +717,15 @@
 		private function saveStatus(e:Event = null):void
 		{
 			if (ExternalInterface.available) {
-				saveStatusForRecovery();
 				if (connected) {
+					
+					if (scorm.get("cmi.mode" != "normal")) return;
+					
+					saveStatusForRecovery();
 					scorm.set("cmi.suspend_data", mementoSerialized);
 					commit();
 				}else {//LocalStorage
+					saveStatusForRecovery();
 					ExternalInterface.call("save2LS", mementoSerialized);
 				}
 			}
