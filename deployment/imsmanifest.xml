@@ -21,22 +21,18 @@
 		<item identifier="item1" identifierref="item1_resource">
 			<title>Exercício</title>
 		</item>
-		<imsss:sequencing>
-			<imsss:controlMode choiceExit="true" flow="true"/>
-			<imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true"/>
-		</imsss:sequencing>
 	</organization>
 </organizations>
 <resources>
 	<resource identifier="item1_resource" adlcp:scormType="sco" href="index.html" type="webcontent">
-    <file href="./index.html"/>
-    <file href="./js/ai.js"/>
-	<file href="./js/jquery-1.4.2.min.js"/>
-  	<file href="./js/swfobject.js"/>
-   	<file href="./js/scorm_wrapper.min.js"/>
-    <file href="./swf/AI-0157.swf"/>
-    <file href="./swf/AI_Loader.swf"/>
-    <file href="./swf/expressInstall.swf"/>
+    <file href="index.html"/>
+    <file href="js/ai.js"/>
+	<file href="js/jquery-1.4.2.min.js"/>
+  	<file href="js/swfobject.js"/>
+   	<file href="js/scorm_wrapper.min.js"/>
+    <file href="swf/AI-0157.swf"/>
+    <file href="swf/AI_Loader.swf"/>
+    <file href="swf/expressInstall.swf"/>
 	</resource>
 </resources>
 </manifest>

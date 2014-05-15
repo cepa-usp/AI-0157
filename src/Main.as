@@ -599,7 +599,7 @@
 		 */
 		private function initLMSConnection () : void
 		{
-			completed = false;
+			//completed = false;
 			connected = false;
 			scorm = new SCORM();
 			
@@ -617,6 +617,8 @@
 				var status:String = scorm.get("cmi.completion_status");	
 				mementoSerialized = scorm.get("cmi.suspend_data");
 				var stringScore:String = scorm.get("cmi.score.raw");
+
+				//initio.text = "cmi.entry = " + scorm.get("cmi.entry");
 				
 				switch(status)
 				{
@@ -681,6 +683,12 @@
 
 				// Notifica o LMS que esta atividade foi concluída.
 				success = scorm.set("cmi.completion_status", (completed ? "completed" : "incomplete"));
+
+				if(completed){
+			  		scorm.set("cmi.exit", "normal");
+				} else {
+			  		scorm.set("cmi.exit", "suspend");
+				}
 
 				// Salva no LMS o exercício que deve ser exibido quando a AI for acessada novamente.
 				success = scorm.set("cmi.location", scormExercise.toString());
